@@ -1,3 +1,3 @@
 # DSXDropSelectMenu
 
-![image](https://github.com/dengshangxun94/DSXDropSelectMenu/master/select_demo.gif)
+![image](https://github.com/dengshangxun94/DSXDropSelectMenu/blob/master/select_demo.gif)
