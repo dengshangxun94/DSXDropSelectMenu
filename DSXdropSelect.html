@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 40px;">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta content="yes" name="apple-mobile-web-app-capable"/>
+		<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+		<meta content="telephone=no" name="format-detection"/>
+		<meta content="email=no" name="format-detection"/>
+		<title>筛选页面菜单栏</title>		
+		
+		<link rel="stylesheet" type="text/css" href="css/DSXDropSelectMenu.css"/>
+		<script type="text/javascript" src="js/jquery-1.11.2.min.js "></script>								
+		<script type="text/javascript" src="js/DSXDropSelectMenu.js"></script>	
+	</head>
+	<body>		
+		<div id="singer_box">
+			
+		</div>
+		
+		
+	</body>
+	<script type="text/javascript">
+		$(function(){	
+			(function(doc, win) {
+			    var docEl = doc.documentElement,
+			        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			        recalc = function() {
+			            var clientWidth = docEl.clientWidth;
+			            if (!clientWidth) return;
+			            docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+			        };
+			    if (!doc.addEventListener) return;
+			    win.addEventListener(resizeEvt, recalc, false);
+			    doc.addEventListener('DOMContentLoaded', recalc, false);
+			})(document, window);
+	   })
+		
+		
+		
+		DropSelectMenu.menuContainer = $('#singer_box')
+		DropSelectMenu.setTitleTop(['全部','费用','类型','风格']);
+		DropSelectMenu.setTitleBottom([[
+		
+		],[
+		   {'key':'全部','value':'0'},{'key':'5万以下','value':'1'},{'key':'5-10万','value':'2'},{'key':'10-20万','value':'3'},{'key':'20-50万','value':'4'},{'key':'50-100万','value':'5'},{'key':'100万以上','value':'6'}
+		
+		],[
+		   {'key':'全部类型','value':'-1'},{'key':'女歌手','value':'0'},{'key':'男歌手','value':'1'},{'key':'组合','value':'2'}
+		
+		],[
+		   {'key':'流行','value':'1'},{'key':'R&B','value':'2'},{'key':'摇滚','value':'3'},{'key':'古典','value':'4'},{'key':'舞曲','value':'5'},{'key':'民谣','value':'6'},{'key':'中国风','value':'7'}
+		
+		]],function(index){console.log(index)});
+	
+	</script>
+</html>
