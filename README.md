@@ -2,8 +2,11 @@
 
 ## usage
 ```js
+//容器
 DropSelectMenu.menuContainer = $('#singer_box')
+//顶部菜单title
 DropSelectMenu.setTitleTop(['全部','费用','类型','风格']);
+//下拉的菜单title
 DropSelectMenu.setTitleBottom([[		
    ],[
         {'key':'全部','value':'0'},{'key':'5万以下','value':'1'},
